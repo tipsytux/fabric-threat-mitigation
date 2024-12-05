@@ -1,0 +1,19 @@
+[
+    {"name": "server", "cores": 2, "ram": 4, "disk": 20, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "firewall", "cores": 16, "ram": 16, "disk": 100, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "server_router", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "isp_router1", "cores": 2, "ram": 4, "disk": 30, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "isp_router2", "cores": 2, "ram": 4, "disk": 30, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "isp_router3", "cores": 2, "ram": 4, "disk": 30, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "switch", "cores": 32, "ram": 16, "disk": 100, "image": "default_ubuntu_20", "packages": ["net-tools"]},
+    {"name": "router_client1", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "router_client2", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "router_attacker1", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "router_attacker2", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "router_attacker3", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "client1", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "client2", "cores": 2, "ram": 4, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "attacker1", "cores": 4, "ram": 8, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "attacker2", "cores": 4, "ram": 8, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]},
+    {"name": "attacker3", "cores": 4, "ram": 8, "disk": 10, "image": "default_ubuntu_22", "packages": ["net-tools"]}
+]

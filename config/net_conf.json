@@ -1,0 +1,130 @@
+[
+    {
+        "name": "net_server_firewall",
+        "subnet": "10.0.0.0/24",
+        "nodes": [
+            {"name": "server", "addr": "10.0.0.2"},
+            {"name": "firewall", "addr": "10.0.0.1"}
+        ]
+    },
+    {
+        "name": "net_firewall_server_router",
+        "subnet": "10.0.1.0/24",
+        "nodes": [
+            {"name": "firewall", "addr": "10.0.1.2"},
+            {"name": "server_router", "addr": "10.0.1.1"}
+        ]
+    },
+    {
+        "name": "net_server_router_isp1",
+        "subnet": "10.0.2.0/24",
+        "nodes": [
+            {"name": "server_router", "addr": "10.0.2.2"},
+            {"name": "isp_router1", "addr": "10.0.2.1"}
+        ]
+    },
+    {
+        "name": "net_isp1_switch",
+        "subnet": "10.0.3.0/24",
+        "nodes": [
+            {"name": "isp_router1", "addr": "10.0.3.2"},
+            {"name": "switch", "addr": "10.0.3.1"}
+        ]
+    },
+    {
+        "name": "net_isp2_switch",
+        "subnet": "10.0.4.0/24",
+        "nodes": [
+            {"name": "isp_router2", "addr": "10.0.4.2"},
+            {"name": "switch", "addr": "10.0.4.1"}
+        ]
+    },
+    {
+        "name": "net_isp3_switch",
+        "subnet": "10.0.5.0/24",
+        "nodes": [
+            {"name": "isp_router3", "addr": "10.0.5.2"},
+            {"name": "switch", "addr": "10.0.5.1"}
+        ]
+    },
+    {
+        "name": "net_isp2_client1",
+        "subnet": "10.0.6.0/24",
+        "nodes": [
+            {"name": "isp_router2", "addr": "10.0.6.1"},
+            {"name": "router_client1", "addr": "10.0.6.2"}
+        ]
+    },
+    {
+        "name": "net_isp2_attacker2",
+        "subnet": "10.0.7.0/24",
+        "nodes": [
+            {"name": "isp_router2", "addr": "10.0.7.1"},
+            {"name": "router_attacker2", "addr": "10.0.7.2"}
+        ]
+    },
+    {
+        "name": "net_isp3_client2",
+        "subnet": "10.0.8.0/24",
+        "nodes": [
+            {"name": "isp_router3", "addr": "10.0.8.1"},
+            {"name": "router_client2", "addr": "10.0.8.2"}
+        ]
+    },
+    {
+        "name": "net_isp3_attacker1",
+        "subnet": "10.0.9.0/24",
+        "nodes": [
+            {"name": "isp_router3", "addr": "10.0.9.1"},
+            {"name": "router_attacker1", "addr": "10.0.9.2"}
+        ]
+    },
+    {
+        "name": "net_isp3_attacker3",
+        "subnet": "10.0.10.0/24",
+        "nodes": [
+            {"name": "isp_router3", "addr": "10.0.10.1"},
+            {"name": "router_attacker3", "addr": "10.0.10.2"}
+        ]
+    },
+    {
+        "name": "net_client1_router",
+        "subnet": "10.0.11.0/24",
+        "nodes": [
+            {"name": "client1", "addr": "10.0.11.2"},
+            {"name": "router_client1", "addr": "10.0.11.1"}
+        ]
+    },
+    {
+        "name": "net_client2_router",
+        "subnet": "10.0.12.0/24",
+        "nodes": [
+            {"name": "client2", "addr": "10.0.12.2"},
+            {"name": "router_client2", "addr": "10.0.12.1"}
+        ]
+    },
+    {
+        "name": "net_attacker1_router",
+        "subnet": "10.0.13.0/24",
+        "nodes": [
+            {"name": "attacker1", "addr": "10.0.13.2"},
+            {"name": "router_attacker1", "addr": "10.0.13.1"}
+        ]
+    },
+    {
+        "name": "net_attacker2_router",
+        "subnet": "10.0.14.0/24",
+        "nodes": [
+            {"name": "attacker2", "addr": "10.0.14.2"},
+            {"name": "router_attacker2", "addr": "10.0.14.1"}
+        ]
+    },
+    {
+        "name": "net_attacker3_router",
+        "subnet": "10.0.15.0/24",
+        "nodes": [
+            {"name": "attacker3", "addr": "10.0.15.2"},
+            {"name": "router_attacker3", "addr": "10.0.15.1"}
+        ]
+    }
+]
