@@ -1,5 +1,5 @@
-# fabric-threat-mitigation
-CSE539 - Course Project - Combining P4 and eBPF for Threat Mitigation via Programmable Data Planes Near Threat Vectors
+# Combining P4 and eBPF for Threat Mitigation via Programmable Data Planes Near Threat Vectors
+CSE534 - Course Project - Combining P4 and eBPF for Threat Mitigation via Programmable Data Planes Near Threat Vectors
 > Authors : Aaditya Gupta, and Noah van Renselaar
 
 # Network Infrastructure
