@@ -57,3 +57,38 @@ int xdp_mitigation_prog(struct xdp_md *ctx) {
     return XDP_PASS;
 
 }
+
+    if (tcp->syn && !tcp->ack) {
+        struct handshake_status *handshake = bpf_map_lookup_elem(&pending_handshakes, &session);
+        if (!handshake) {
+            struct handshake_status new_handshake = {
+                .begin_time = bpf_ktime_get_ns(),
+                .synack_sent = 0,
+            };
+            bpf_map_update_elem(&pending_handshakes, &session, &new_handshake, BPF_ANY);
+        }
+    } else if (tcp->syn && tcp->ack) {
+        struct handshake_status *handshake = bpf_map_lookup_elem(&pending_handshakes, &session);
+        if (handshake) {
+            handshake->synack_sent = 1;
+        }
+    } else if (tcp->ack && !tcp->syn) {
+        struct handshake_status *handshake = bpf_map_lookup_elem(&pending_handshakes, &session);
+        if (handshake && handshake->synack_sent) {
+            bpf_map_delete_elem(&pending_handshakes, &session);
+        }
+    } else{
+            struct handshake_status *handshake = bpf_map_lookup_elem(&pending_handshakes, &session);
+            if (handshake) {
+                if ((bpf_ktime_get_ns() - handshake->begin_time) < 1000000000) { // 1 second
+                        bpf_printk("Dropping SYN flood packet: saddr=%x\n", session.saddr);
+                        return XDP_DROP;
+                }
+        }
+
+    }
+
+    return XDP_PASS;
+}
+
+char _license[] SEC("license") = "GPL";
